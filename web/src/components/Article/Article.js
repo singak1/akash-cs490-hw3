@@ -1,4 +1,5 @@
 import { Link, routes } from '@redwoodjs/router'
+import CommentsCell from 'src/components/CommentsCell'
 
 const turncate = (text, length) => {
   return text.substring(0, length) + '...'
@@ -15,6 +16,11 @@ const Article = ({ article, summary = false }) => {
       <div className="mt-2 text-gray-900 font-light">
         {summary ? turncate(article.body, 100) : article.body}
       </div>
+        {!summary && (
+          <div className="mt-10" >
+            <CommentsCell />
+          </div>
+        )}
     </article>
   )
 }
