@@ -1,6 +1,6 @@
 export const standard = defineScenario({
   comment: {
-    one: {
+    fors: {
       data: {
         name: 'Forsen',
         body: 'What is this? a comment for four dimensional beings',
